@@ -22,9 +22,9 @@
         <div>
           <div class="my-info">
             <h2 class="my-profession">Experimentalphysiker, Dozent</h2>
-            
-            <h1 class="my-name">Volodymyr Vyshniak </h1>
-            
+
+            <h1 class="my-name">Volodymyr Vyshniak</h1>
+
             <p class="my-descr">
               Ich bin experimenteller Physiker und Dozent für Physik aus der
               Ukraine. Bis vor Kurzem war ich als wissenschaftlicher Mitarbeiter
@@ -186,14 +186,15 @@
               <li class="work-experience-duties-item">Vertrauenslehrer</li>
             </ul>
           </div>
-
         </div>
         <!-- Education 1-->
         <div class="education-container">
           <h3 class="work-experience-title">Bildung</h3>
 
           <h4 class="work-experience-company">
-            <span class="company-name">Nationale Taras-Schewtschenko-Universität</span>
+            <span class="company-name"
+              >Nationale Taras-Schewtschenko-Universität</span
+            >
           </h4>
 
           <h4 class="work-experience-company">Physiker, Lehrer</h4>
@@ -204,25 +205,23 @@
           </p>
 
           <p class="my-descr">
-            Absolvierte im Jahr 2003 die Nationale Taras-Schewtschenko-Universität Kyjiw und erhielt die vollständige Hochschulausbildung in der Studienrichtung „Festkörperphzsik“  
-            sowie erwarb die Qualifikation Physiker, Lehrer. 
+            Absolvierte im Jahr 2003 die Nationale
+            Taras-Schewtschenko-Universität Kyjiw und erhielt die vollständige
+            Hochschulausbildung in der Studienrichtung „Festkörperphzsik“ sowie
+            erwarb die Qualifikation Physiker, Lehrer.
           </p>
 
           <h4 class="work-experience-company">
             <span class="company-name">Gymnasium</span>
           </h4>
 
-            <p class="work-experience-period">
+          <p class="work-experience-period">
             09.1986 - 05.1997
             <span class="work-experience-separator">|</span> Shpytky, Ukraine
           </p>
-          
-          <p class="my-descr">
-            Abschluss: Hochschulreife
-          </p>
 
+          <p class="my-descr">Abschluss: Hochschulreife</p>
         </div>
-        
       </div>
       <!-- Sidebar -->
       <aside class="sidebar">
@@ -246,31 +245,60 @@
               >
             </p>
           </div>
+
           <!-- Lebenslauf -->
           <div class="skills-container">
             <h3 class="skills-title">Lebenslauf</h3>
-            <a class="contacts-link" href="document/Vyshniak Lebenslauf.pdf" target="_blank" download id="downloadLink">
+            <a
+              class="contacts-link download-link"
+              href="document/Vyshniak Lebenslauf.pdf"
+              target="_blank"
+              download
+            >
               Vyshniak Lebenslauf.pdf
             </a>
           </div>
-          
-          <script>
-            document.getElementById("downloadLink").addEventListener("click", function (event) {
+
+          <div class="skills-container">
+            <h3 class="skills-title">Zeugnisbewertung</h3>
+            <a
+              class="contacts-link download-link"
+              href="document/Zeugnisbewertung_signiert_A.pdf"
+              target="_blank"
+              download
+            >
+              Zeugnisbewertung Bachelor.pdf
+            </a>
+            <a
+              class="contacts-link download-link"
+              href="document/Zeugnisbewertung_signiert_B.pdf"
+              target="_blank"
+              download
+            >
+              Zeugnisbewertung Spezialist.pdf
+            </a>
+          </div>
+        </div>
+
+        <script>
+          document.querySelectorAll(".download-link").forEach((link) => {
+            link.addEventListener("click", function (event) {
               event.preventDefault(); // Запобігаємо стандартній дії посилання
               let fileUrl = this.href;
-          
+
               // Відкриваємо файл у новій вкладці
               window.open(fileUrl, "_blank");
-          
+
               // Створюємо тимчасовий елемент для завантаження
-              let link = document.createElement("a");
-              link.href = fileUrl;
-              link.download = "Vyshniak Lebenslauf.pdf";
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
+              let tempLink = document.createElement("a");
+              tempLink.href = fileUrl;
+              tempLink.setAttribute("download", this.textContent.trim());
+              document.body.appendChild(tempLink);
+              tempLink.click();
+              document.body.removeChild(tempLink);
             });
-          </script>
+          });
+        </script>
       </aside>
     </div>
   </body>
