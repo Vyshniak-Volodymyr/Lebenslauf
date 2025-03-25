@@ -233,16 +233,16 @@
 
             <p class="contacts-item">
               <span class="contacts-type">Telefon:</span>
-              <a class="contacts-link" href="tel:+4915151757482"
-                >+49 151 51757482</a
-              >
+              <a class="contacts-link" href="tel:+4915151757482">
+                +49 151 51757482
+              </a>
             </p>
 
             <p class="contacts-item">
               <span class="contacts-type">E-Mail:</span>
-              <a class="contacts-link" href="mailto:vyshniak.de@gmail.com"
-                >vyshniak.de@gmail.com</a
-              >
+              <a class="contacts-link" href="mailto:vyshniak.de@gmail.com">
+                vyshniak.de@gmail.com
+              </a>
             </p>
           </div>
 
@@ -250,10 +250,9 @@
           <div class="skills-container">
             <h3 class="skills-title">Lebenslauf</h3>
             <a
-              class="contacts-link download-link"
+              class="contacts-link download-link lebenslauf"
               href="document/Vyshniak Lebenslauf.pdf"
               target="_blank"
-              download
             >
               Vyshniak Lebenslauf.pdf
             </a>
@@ -265,7 +264,6 @@
               class="contacts-link download-link"
               href="document/Zeugnisbewertung_signiert_A.pdf"
               target="_blank"
-              download
             >
               Zeugnisbewertung Bachelor.pdf
             </a>
@@ -273,7 +271,6 @@
               class="contacts-link download-link"
               href="document/Zeugnisbewertung_signiert_B.pdf"
               target="_blank"
-              download
             >
               Zeugnisbewertung Spezialist.pdf
             </a>
@@ -283,19 +280,22 @@
         <script>
           document.querySelectorAll(".download-link").forEach((link) => {
             link.addEventListener("click", function (event) {
-              event.preventDefault(); // Запобігаємо стандартній дії посилання
+              event.preventDefault(); // Запобігаємо стандартному завантаженню
+
               let fileUrl = this.href;
 
-              // Відкриваємо файл у новій вкладці
-              window.open(fileUrl, "_blank");
+              // Відкриваємо PDF у новій вкладці
+              let newTab = window.open(fileUrl, "_blank");
 
-              // Створюємо тимчасовий елемент для завантаження
-              let tempLink = document.createElement("a");
-              tempLink.href = fileUrl;
-              tempLink.setAttribute("download", this.textContent.trim());
-              document.body.appendChild(tempLink);
-              tempLink.click();
-              document.body.removeChild(tempLink);
+              // Чекаємо 2 секунди перед завантаженням
+              setTimeout(() => {
+                let tempLink = document.createElement("a");
+                tempLink.href = fileUrl;
+                tempLink.setAttribute("download", this.textContent.trim());
+                document.body.appendChild(tempLink);
+                tempLink.click();
+                document.body.removeChild(tempLink);
+              }, 2000);
             });
           });
         </script>

@@ -74,6 +74,11 @@ ol {
   text-decoration-line: underline;
 }
 
+.contacts-link:hover {
+  color: #0056b3; /* Темніший відтінок синього при наведенні */
+  font-weight: bold; /* Робить текст жирним */
+}
+
 .contacts-item {
   margin-top: 0;
   margin-bottom: 4px;
@@ -168,6 +173,11 @@ ol {
   text-decoration-line: underline;
 }
 
+.my-projects-item-link:hover {
+  color: #0056b3;
+  font-weight: bold; /* Робить текст жирним */
+}
+
 .my-projects-item-tech {
   color: #595959;
   font-size: 14px;
@@ -241,13 +251,13 @@ ol {
 то додавати .download-link у CSS не потрібно. */
 
 .download-link {
-  font-weight: bold; /* Робить текст жирним */
   color: #007bff; /* Синій колір */
   text-decoration: underline; /* Підкреслений текст */
 }
 
 .download-link:hover {
   color: #0056b3; /* Темніший відтінок синього при наведенні */
+  font-weight: bold; /* Робить текст жирним */
 }
 
 /* *** */
