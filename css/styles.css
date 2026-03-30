@@ -19,13 +19,14 @@ ol {
   flex-direction: row-reverse;
   width: 1200px;
   margin: 0 auto;
+  align-items: flex-start;
 }
 
 /* Main  content*/
 
 .main-content {
   padding-left: 88px;
-  padding-top: 80px;
+  padding-top: 40px;
   padding-right: 40px;
   padding-bottom: 88px;
   box-sizing: border-box;
