@@ -73,17 +73,23 @@ ol {
 }
 
 .contacts-link {
-  color: #2979ff;
+  color: #005fff;
   font-size: 15px;
   font-weight: 500;
   line-height: 1.5;
   text-decoration: none;
+  display: inline-block;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease,
+    text-decoration 0.2s ease;
+  transform-origin: left center;
 }
 
 .contacts-link:hover {
-  color: #0056b3;
-  font-weight: bold;
+  color: #003bb5;
   text-decoration: underline;
+  transform: scale(1.04);
 }
 
 .contacts-item {
@@ -197,12 +203,18 @@ ol {
   font-weight: 500;
   line-height: 24px;
   text-decoration: none;
+  display: inline-block;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease,
+    text-decoration 0.2s ease;
+  transform-origin: left center;
 }
 
 .my-projects-item-link:hover {
-  color: #0056b3;
-  font-weight: bold;
+  color: #003bb5;
   text-decoration: underline;
+  transform: scale(1.04);
 }
 
 .my-projects-item-tech {
@@ -241,14 +253,20 @@ ol {
 }
 
 .company-link {
-  color: #6d9bf5;
+  color: #005fff;
   text-decoration: none;
+  display: inline-block;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease,
+    text-decoration 0.2s ease;
+  transform-origin: left center;
 }
 
 .company-link:hover {
-  color: #0056b3;
-  font-weight: bold;
+  color: #003bb5;
   text-decoration: underline;
+  transform: scale(1.04);
 }
 
 .work-experience-period {
@@ -284,16 +302,21 @@ ol {
 }
 
 .download-link {
-  display: block;
+  display: inline-block;
   margin-bottom: 6px;
-  color: #2979ff;
+  color: #005fff;
   text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease,
+    text-decoration 0.2s ease;
+  transform-origin: left center;
 }
 
 .download-link:hover {
-  color: #0056b3;
-  font-weight: bold;
+  color: #003bb5;
   text-decoration: underline;
+  transform: scale(1.04);
 }
 
 /* ===== RESPONSIVE ===== */
