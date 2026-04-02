@@ -7,8 +7,6 @@ body {
   font-family: "Inter", "Montserrat", sans-serif;
 }
 
-/* 02_04-2026_04-20*/
-
 ul,
 ol {
   margin-top: 0;
@@ -422,4 +420,6 @@ ol {
   .my-projects-container {
     margin-bottom: 24px;
   }
+
+  /* 02_04-2026_04-20 */
 }
