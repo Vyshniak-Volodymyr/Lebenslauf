@@ -240,6 +240,17 @@ ol {
   color: #6d9bf5;
 }
 
+.company-link {
+  color: #6d9bf5;
+  text-decoration: none;
+}
+
+.company-link:hover {
+  color: #0056b3;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .work-experience-period {
   color: #a8a8a8;
   font-size: 12px;
