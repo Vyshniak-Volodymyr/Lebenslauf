@@ -57,7 +57,6 @@ ol {
 
 .contacts-title {
   color: #161d2a;
-  font-family: Montserrat;
   font-size: 22px;
   font-weight: 700;
   line-height: normal;
@@ -69,26 +68,30 @@ ol {
   color: #161d2a;
   font-size: 14px;
   font-weight: 700;
-  line-height: 24px;
-  margin-right: 8px;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
 .contacts-link {
   color: #2979ff;
   font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
-  text-decoration-line: underline;
+  line-height: 1.5;
+  text-decoration: none;
 }
 
 .contacts-link:hover {
-  color: #0056b3; /* Темніший відтінок синього при наведенні */
-  font-weight: bold; /* Робить текст жирним */
+  color: #0056b3;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .contacts-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
   margin-top: 0;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .contacts-container {
@@ -146,7 +149,13 @@ ol {
   line-height: 24px;
 
   text-align: justify;
-  hyphens: auto;
+  text-justify: inter-word;
+
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+
+  text-indent: 20px; /* 🔥 відступ першого рядка */
 }
 
 .my-descr {
@@ -187,12 +196,13 @@ ol {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  text-decoration-line: underline;
+  text-decoration: none;
 }
 
 .my-projects-item-link:hover {
   color: #0056b3;
-  font-weight: bold; /* Робить текст жирним */
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .my-projects-item-tech {
@@ -206,14 +216,14 @@ ol {
   margin-bottom: 40px;
 }
 
-/* Wortk experience */
+/* Work experience */
 
 .work-experience-title {
   color: #000;
   font-size: 22px;
   font-weight: 700;
   line-height: 27px;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 8px;
 }
 
@@ -248,7 +258,6 @@ ol {
 
 .work-experience-duties-item {
   color: #595959;
-  font-family: Montserrat;
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
@@ -263,21 +272,18 @@ ol {
   margin-top: 40px;
 }
 
-/* Це допоможе зробити посилання більш помітними для користувача.
-Але якщо тобі потрібна лише функціональність (відкривати у вкладці + завантажувати),
-то додавати .download-link у CSS не потрібно. */
-
 .download-link {
-  color: #007bff; /* Синій колір */
-  text-decoration: underline; /* Підкреслений текст */
+  display: block;
+  margin-bottom: 6px;
+  color: #2979ff;
+  text-decoration: none;
 }
 
 .download-link:hover {
-  color: #0056b3; /* Темніший відтінок синього при наведенні */
-  font-weight: bold; /* Робить текст жирним */
+  color: #0056b3;
+  font-weight: bold;
+  text-decoration: underline;
 }
-
-/* *** */
 
 /* ===== RESPONSIVE ===== */
 
